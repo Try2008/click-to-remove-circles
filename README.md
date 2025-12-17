@@ -17,3 +17,4 @@ When you click a circle, it is removed from the DOM completely (not just hidden)
 1. Download / clone the project
 2. Open `index.html` in your browser
 
+Live Demo: [****](https://try2008.github.io/click-to-remove-circles/)
