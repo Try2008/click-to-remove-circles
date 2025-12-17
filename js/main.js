@@ -1,13 +1,13 @@
-// Get the parent container
 const circlesContainer = document.getElementById("circles-container");
 
-// Get all children (live collection)
-const circles = circlesContainer.children;
+circlesContainer.addEventListener("click", (event) => {
+  const clickedEl = event.target;
 
-// We convert the HTMLCollection to an array
-// so we can safely attach events
-Array.from(circles).forEach((circle) => {
-  circle.addEventListener("click", () => {
-    circlesContainer.removeChild(circle);
-  });
+  // Make sure the clicked element is a direct child of the container
+  const childrenArray = Array.from(circlesContainer.children);
+  const isDirectChild = childrenArray.includes(clickedEl);
+
+  if (!isDirectChild) return;
+
+  circlesContainer.removeChild(clickedEl);
 });
