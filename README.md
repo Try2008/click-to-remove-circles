@@ -1,3 +1,5 @@
+Live Demo: https://try2008.github.io/click-to-remove-circles/
+
 # Click to Remove Circles
 
 A simple mini project: three blue circles are displayed in a row.  
@@ -16,5 +18,3 @@ When you click a circle, it is removed from the DOM completely (not just hidden)
 ## How to Run
 1. Download / clone the project
 2. Open `index.html` in your browser
-
-Live Demo: [****](https://try2008.github.io/click-to-remove-circles/)
