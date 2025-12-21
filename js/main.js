@@ -1,13 +1,15 @@
 const circlesContainer = document.getElementById("circles-container");
 
 circlesContainer.addEventListener("click", (event) => {
-  const clickedEl = event.target;
+  // Find the nearest element with class "circle" that was clicked
+  const circle = event.target.closest(".circle");
 
-  // Make sure the clicked element is a direct child of the container
-  const childrenArray = Array.from(circlesContainer.children);
-  const isDirectChild = childrenArray.includes(clickedEl);
+  // If click was not on a circle (or inside one), do nothing
+  if (!circle) return;
 
-  if (!isDirectChild) return;
+  // Safety: make sure the found circle is inside our container
+  if (!circlesContainer.contains(circle)) return;
 
-  circlesContainer.removeChild(clickedEl);
+  // Remove from DOM completely
+  circle.remove();
 });
